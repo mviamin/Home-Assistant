@@ -1,0 +1,51 @@
+esphome:
+  name: esp32_1
+  platform: ESP32
+  board: nodemcu-32s
+
+wifi:
+  ssid: "XXXXXX"
+  password: "XXXXXXX"
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+switch:
+  - platform: gpio
+    name: "Zone1"
+    pin: GPIO4
+    inverted: true
+  - platform: gpio
+    name: "Zone2"
+    pin: GPIO16
+    inverted: true
+  - platform: gpio
+    name: "Zone3"
+    pin: GPIO17
+    inverted: true
+  - platform: gpio
+    name: "Zone4"
+    pin: GPIO18
+    inverted: true
+  - platform: gpio
+    name: "Zone5"
+    pin: GPIO19
+    inverted: true
+  - platform: gpio
+    name: "Zone6"
+    pin: GPIO21
+    inverted: true
+  - platform: gpio
+    name: "Zone7"
+    pin: GPIO22
+    inverted: true
+  - platform: gpio
+    name: "Zone8"
+    pin: GPIO23
+    inverted: true
+  

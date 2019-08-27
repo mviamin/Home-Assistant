@@ -1,0 +1,167 @@
+  - badges: []
+    cards:
+      - cards:
+          - entity: input_boolean.irrigation_master_control_switch
+            state_image:
+              'off': /local/sprinkler-off.png
+              'on': /local/sprinkler-on.png
+            tap_action:
+              action: toggle
+            type: picture-entity
+          - card:
+              cards:
+                - cards:
+                    - entity: input_boolean.cycle1_manual_run
+                      name: West Side
+                      tap_action:
+                        action: toggle
+                      type: 'custom:toggle-lock-entity-row'
+                    - entity: input_boolean.cycle2_manual_run
+                      name: East Side
+                      tap_action:
+                        action: toggle
+                      type: 'custom:toggle-lock-entity-row'
+                  type: horizontal-stack
+                - entities:
+                    - entity: switch.zone1
+                      icon: 'mdi:engine'
+                    - entity: switch.zone2
+                      icon: 'mdi:engine'
+                    - entity: switch.zone3
+                      icon: 'mdi:engine'
+                    - entity: switch.zone4
+                      icon: 'mdi:engine'
+                    - entity: switch.zone5
+                      icon: 'mdi:engine'
+                  title: West Side
+                  type: glance
+                - entities:
+                    - entity: switch.zone9
+                      icon: 'mdi:engine'
+                    - entity: switch.zone10
+                      icon: 'mdi:engine'
+                    - entity: switch.zone11
+                      icon: 'mdi:engine'
+                    - entity: switch.zone12
+                      icon: 'mdi:engine'
+                    - entity: switch.zone13
+                      icon: 'mdi:engine'
+                    - entity: switch.zone14
+                      icon: 'mdi:engine'
+                    - entity: switch.zone15
+                      icon: 'mdi:engine'
+                    - entity: switch.zone16
+                      icon: 'mdi:engine'
+                  title: East Side
+                  type: glance
+                - entities:
+                    - head:
+                        entity: sensor.last_irrigated_time
+                        icon: 'mdi:update'
+                      items:
+                        - entity: sensor.zone1_time_today
+                          icon: 'mdi:water'
+                        - entity: sensor.zone2_time_today
+                          icon: 'mdi:water'
+                        - entity: sensor.zone3_time_today
+                          icon: 'mdi:water'
+                        - entity: sensor.zone4_time_today
+                          icon: 'mdi:water'
+                        - entity: sensor.zone5_time_today
+                          icon: 'mdi:water'
+                        - entity: sensor.zone9_time_today
+                          icon: 'mdi:water'
+                        - entity: sensor.zone10_time_today
+                          icon: 'mdi:water'
+                        - entity: sensor.zone11_time_today
+                          icon: 'mdi:water'
+                        - entity: sensor.zone12_time_today
+                          icon: 'mdi:water'
+                        - entity: sensor.zone13_time_today
+                          icon: 'mdi:water'
+                        - entity: sensor.zone14_time_today
+                          icon: 'mdi:water'
+                        - entity: sensor.zone15_time_today
+                          icon: 'mdi:water'
+                        - entity: sensor.zone16_time_today
+                          icon: 'mdi:water'
+                      type: 'custom:fold-entity-row'
+                  show_header_toggle: false
+                  title: Irrigation History
+                  type: entities
+              type: vertical-stack
+            conditions:
+              - entity: input_boolean.irrigation_master_control_switch
+                state: 'on'
+            type: conditional
+        type: vertical-stack
+      - card:
+          entities:
+            - entity: sensor.cycle1_running
+              name: West Side Area
+            - entity: sensor.cycle1_zone_being_watered
+              icon: 'mdi:fountain'
+            - timer.cycle1_zone_duration
+            - head:
+                entity: sensor.cycle1_running
+              items:
+                - input_number.cycle1_zone1_duration
+                - input_number.cycle1_zone2_duration
+                - input_number.cycle1_zone3_duration
+                - input_number.cycle1_zone4_duration
+                - input_number.cycle1_zone5_duration
+              type: 'custom:fold-entity-row'
+            - head:
+                entity: input_boolean.cycle1_enable
+                type: 'custom:toggle-lock-entity-row'
+              items:
+                - entity: sensor.cycle1_next_run_time
+                  icon: 'mdi:clock-start'
+                - input_select.cycle1_schedule_time
+                - input_select.cycle1_watering_days
+              type: 'custom:fold-entity-row'
+          show_header_toggle: false
+          title: West Side
+          type: entities
+        conditions:
+          - entity: input_boolean.irrigation_master_control_switch
+            state: 'on'
+        type: conditional
+      - card:
+          entities:
+            - entity: sensor.cycle2_running
+              name: East Side
+            - entity: sensor.cycle2_zone_being_watered
+              icon: 'mdi:fountain'
+            - timer.cycle2_zone_duration
+            - head:
+                entity: sensor.cycle2_running
+                name: East Side
+              items:
+                - input_number.cycle2_zone9_duration
+                - input_number.cycle2_zone10_duration
+                - input_number.cycle2_zone11_duration
+                - input_number.cycle2_zone12_duration
+                - input_number.cycle2_zone13_duration
+                - input_number.cycle2_zone14_duration
+                - input_number.cycle2_zone15_duration
+                - input_number.cycle2_zone16_duration
+              type: 'custom:fold-entity-row'
+            - head:
+                entity: input_boolean.cycle2_enable
+                type: 'custom:toggle-lock-entity-row'
+              items:
+                - entity: sensor.cycle2_next_run_time
+                  icon: 'mdi:clock-start'
+                - input_select.cycle2_schedule_time
+                - input_select.cycle2_watering_days
+              type: 'custom:fold-entity-row'
+          show_header_toggle: false
+          title: East Side
+          type: entities
+        conditions:
+          - entity: input_boolean.irrigation_master_control_switch
+            state: 'on'
+        type: conditional
+    icon: 'mdi:flower'
+    title: Garden
