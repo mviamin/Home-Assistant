@@ -1,24 +1,25 @@
 # Home-Assistant
 
-I have adapted the fantastic code from @kloggy to an ESP32 and an 8 relay board to have up to 8 zones. I have 2 separate ESPs for a total of 16 zones configured the same way (only different names for the zones). One activates the "West" area, the other the "EAst". Also not using the Weather-related watering adjustments. No need given the weather patterns where I live :) 
+I have adapted the fantastic code from @kloggy to an ESP32 and an 8 relay board to have up to 8 zones. I have 2 separate ESPs for a total of 16 zones configured the same way (only different names for the zones). One activates the "West" area, the other the "East". Also not using the Weather-related watering adjustments. No need given the weather patterns where I live :) 
 
 Parts : 
+
 https://www.amazon.com/gp/product/B07QCP2451/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
 
 https://www.amazon.com/gp/product/B07C8LSXKC/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
 
 https://www.amazon.com/gp/product/B07Q29CD7J/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
 
-Requirements: 
+Software Requirements: 
 Requires the following custom cards to be installed and working
 - toggle-lock-entity-row
 - config-template-card
 - fold-entity-row
 - toggle-lock-entity-row
 
-Setup ESP 32 with ESPHome
+Setup the ESP32 with ESPHome
  - esp32_1.yaml for my example of how the ESP is configured to handle 8 zones
- - i have a second one configured the same way, just different names for the zones
+ - I have a second one configured the same way, just different names for the zones
 
 Changes to configuration :
 1.   Add following line in configuration.yaml 
