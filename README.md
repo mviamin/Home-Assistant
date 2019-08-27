@@ -1,6 +1,6 @@
 # Home-Assistant
 
-I have adapted the fantastic code from @kloggy to an ESP32 and an 8 relay board to have up to 8 zones. Also not using the Weather-related watering adjustments. No need given the weather patterns where I live :) This is work in progress since i need to add a second station for the other part of my yard (8 more zones) and intend to use the morning/afternoon cycles settings to activate Zone East and Zone West separately. I have 2 separate ESPs for a total of 16 zones configured the same way (only different names for the zones).
+I have adapted the fantastic code from @kloggy to an ESP32 and an 8 relay board to have up to 8 zones. I have 2 separate ESPs for a total of 16 zones configured the same way (only different names for the zones). One activates the "West" area, the other the "EAst". Also not using the Weather-related watering adjustments. No need given the weather patterns where I live :) 
 
 Parts : 
 https://www.amazon.com/gp/product/B07QCP2451/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
