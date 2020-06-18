@@ -78,11 +78,11 @@ automation:
     action:
       - service: script.irrigation_run_a_cycle
         data_template:
-          cycle: 1
+          cycle: '1'
 
       - service: script.update_next_runtime
         data_template:
-          cycle: 1
+          cycle: '1'
 
   #=== Cycle 2
   - alias: Irrigation - Run Cycle 2
@@ -104,11 +104,11 @@ automation:
     action:
       - service: script.irrigation_run_a_cycle
         data_template:
-          cycle: 2
+          cycle: '2'
 
       - service: script.update_next_runtime
         data_template:
-          cycle: 2
+          cycle: '2'
 
 
   #======================
@@ -333,7 +333,7 @@ script:
       - service: script.irrigation_irrigate_a_zone
         data_template:
           cycle: '{{ cycle }}'
-          zone: 1
+          zone: '1'
 
       #=== Wait for script.irrigation_irrigate_a_zone to end
       - wait_template: "{{ is_state('script.irrigation_irrigate_a_zone', 'off') }}"
@@ -342,7 +342,7 @@ script:
       - service: script.irrigation_irrigate_a_zone
         data_template:
           cycle: '{{ cycle }}'
-          zone: 2
+          zone: '2'
 
       #=== Wait for script.irrigation_irrigate_a_zone to end
       - wait_template: "{{ is_state('script.irrigation_irrigate_a_zone', 'off') }}"
@@ -351,7 +351,7 @@ script:
       - service: script.irrigation_irrigate_a_zone
         data_template:
           cycle: '{{ cycle }}'
-          zone: 3
+          zone: '3'
 
       #=== Wait for script.irrigation_irrigate_a_zone to end
       - wait_template: "{{ is_state('script.irrigation_irrigate_a_zone', 'off') }}"
@@ -360,7 +360,7 @@ script:
       - service: script.irrigation_irrigate_a_zone
         data_template:
           cycle: '{{ cycle }}'
-          zone: 4
+          zone: '4'
 
       #=== Wait for script.irrigation_irrigate_a_zone to end
       - wait_template: "{{ is_state('script.irrigation_irrigate_a_zone', 'off') }}"
@@ -369,7 +369,7 @@ script:
       - service: script.irrigation_irrigate_a_zone
         data_template:
           cycle: '{{ cycle }}'
-          zone: 5
+          zone: '5'
 
       #=== Wait for script.irrigation_irrigate_a_zone to end
       - wait_template: "{{ is_state('script.irrigation_irrigate_a_zone', 'off') }}"
@@ -378,7 +378,7 @@ script:
       - service: script.irrigation_irrigate_a_zone
         data_template:
           cycle: '{{ cycle }}'
-          zone: 6
+          zone: '6'
 
       #=== Wait for script.irrigation_irrigate_a_zone to end
       - wait_template: "{{ is_state('script.irrigation_irrigate_a_zone', 'off') }}"
@@ -387,7 +387,7 @@ script:
       - service: script.irrigation_irrigate_a_zone
         data_template:
           cycle: '{{ cycle }}'
-          zone: 7
+          zone: '7'
 
       #=== Wait for script.irrigation_irrigate_a_zone to end
       - wait_template: "{{ is_state('script.irrigation_irrigate_a_zone', 'off') }}"
@@ -396,7 +396,7 @@ script:
       - service: script.irrigation_irrigate_a_zone
         data_template:
           cycle: '{{ cycle }}'
-          zone: 8
+          zone: '8'
 
       #=== Wait for script.irrigation_irrigate_a_zone to end
       - wait_template: "{{ is_state('script.irrigation_irrigate_a_zone', 'off') }}"
@@ -405,7 +405,7 @@ script:
       - service: script.irrigation_irrigate_a_zone
         data_template:
           cycle: '{{ cycle }}'
-          zone: 9
+          zone: '9'
 
       #=== Wait for script.irrigation_irrigate_a_zone to end
       - wait_template: "{{ is_state('script.irrigation_irrigate_a_zone', 'off') }}"
@@ -414,7 +414,7 @@ script:
       - service: script.irrigation_irrigate_a_zone
         data_template:
           cycle: '{{ cycle }}'
-          zone: 10
+          zone: '10'
 
       #=== Wait for script.irrigation_irrigate_a_zone to end
       - wait_template: "{{ is_state('script.irrigation_irrigate_a_zone', 'off') }}"
@@ -423,7 +423,7 @@ script:
       - service: script.irrigation_irrigate_a_zone
         data_template:
           cycle: '{{ cycle }}'
-          zone: 11
+          zone: '11'
 
       #=== Wait for script.irrigation_irrigate_a_zone to end
       - wait_template: "{{ is_state('script.irrigation_irrigate_a_zone', 'off') }}"
@@ -432,7 +432,7 @@ script:
       - service: script.irrigation_irrigate_a_zone
         data_template:
           cycle: '{{ cycle }}'
-          zone: 12
+          zone: '12'
 
       #=== Wait for script.irrigation_irrigate_a_zone to end
       - wait_template: "{{ is_state('script.irrigation_irrigate_a_zone', 'off') }}"
@@ -441,7 +441,7 @@ script:
       - service: script.irrigation_irrigate_a_zone
         data_template:
           cycle: '{{ cycle }}'
-          zone: 13
+          zone: '13'
 
       #=== Wait for script.irrigation_irrigate_a_zone to end
       - wait_template: "{{ is_state('script.irrigation_irrigate_a_zone', 'off') }}"
@@ -450,7 +450,7 @@ script:
       - service: script.irrigation_irrigate_a_zone
         data_template:
           cycle: '{{ cycle }}'
-          zone: 14
+          zone: '14'
 
       #=== Wait for script.irrigation_irrigate_a_zone to end
       - wait_template: "{{ is_state('script.irrigation_irrigate_a_zone', 'off') }}"
@@ -459,7 +459,7 @@ script:
       - service: script.irrigation_irrigate_a_zone
         data_template:
           cycle: '{{ cycle }}'
-          zone: 15
+          zone: '15'
 
       #=== Wait for script.irrigation_irrigate_a_zone to end
       - wait_template: "{{ is_state('script.irrigation_irrigate_a_zone', 'off') }}"
@@ -468,7 +468,7 @@ script:
       - service: script.irrigation_irrigate_a_zone
         data_template:
           cycle: '{{ cycle }}'
-          zone: 16
+          zone: '16'
 
       #=== Wait for script.irrigation_irrigate_a_zone to end
       - wait_template: "{{ is_state('script.irrigation_irrigate_a_zone', 'off') }}"
